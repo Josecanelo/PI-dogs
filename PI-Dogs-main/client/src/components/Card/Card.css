@@ -18,7 +18,8 @@
     backdrop-filter: blur(2px);
     border-radius: 20px;
     border: 1px solid #ffffff;
-
+    color: #8DCECD;
+    text-shadow: 1px 1px 0.5px #5a8685;
 }
 
 .dogCard:hover {
@@ -39,6 +40,7 @@
 .nameCont {
     font-size: 20px;
     font-weight: 600;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.664);
 }
 .weightCont {
   font-size: 15px;

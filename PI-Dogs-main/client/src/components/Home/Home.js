@@ -76,13 +76,15 @@ const Home = ()=> {
                    <div className="contenedorDerecha">
                         <SearchBar className="searchBar" error={error}/>
                         <div className="divSelects">
-                            <select onChange={handleOrderedDogs}>
-                                <option disabled selected defaultValue>Order</option>
-                                <option value="A-Z">A-Z</option>
-                                <option value="Z-A">Z-A</option>
-                                <option value="Heavier">Heavier</option>
-                                <option value="Lightier">Lightier</option>
-                            </select>
+                            <div className="">
+                                <select className="" onChange={handleOrderedDogs}>
+                                    <option disabled selected defaultValue>Order</option>
+                                    <option value="A-Z">A-Z</option>
+                                    <option value="Z-A">Z-A</option>
+                                    <option value="Heavier">Heavier</option>
+                                    <option value="Lightier">Lightier</option>
+                                </select>
+                            </div>
                             <select onChange={handleFilterByCreated}>
                                 <option disabled selected defaultValue>Dogs from</option>
                                 <option value="All">All</option>
@@ -102,7 +104,7 @@ const Home = ()=> {
                         <button className="btnHome"><Link id="linkCreate" to="/dog">Create breed</Link></button>
                     </div>
                 </header>            
-
+                <div className="text"><h1>Learn more about your dog!</h1></div>
                 <div className="divCardBg">
                     <Paginate dogsPerPage={dogsPerPage} dogs={dogsState.length} paginado={paginado} currentPage={currentPage}/>
                     <div>

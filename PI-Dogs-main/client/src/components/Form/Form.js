@@ -55,21 +55,22 @@ const Form = ()=> {
         } else if(parseInt(input.minWeight) >= parseInt(input.maxWeight)) {
           errors.minWeight= "Debe ser menor al max."
         }
-
-        if(parseInt(input.lifeSpan) > 20) {
-          errors.lifeSpan = "Debe ser menor a 20 Años."
-        } else if(!/^[0-9]+$/.test(input.lifeSpan)) {
-          errors.lifeSpan = "Solo puede contener numeros."
+        if(input.lifeSpan){
+          if(parseInt(input.lifeSpan) > 20) {
+            errors.lifeSpan = "Debe ser menor a 20 Años."
+          } else if(!/^[0-9]+$/.test(input.lifeSpan)) {
+            errors.lifeSpan = "Solo puede contener numeros."
+          }
         }
         if(!input.temperaments.length) {
             errors.temperaments = "Debe seleccionar almenos un temperamento."
         }
-      
         return errors;
       }
       
     
     const [errors, setErrors] = useState({})
+
     const [input, setInput] = useState({
         name:"",
         minHeight: "",
@@ -125,73 +126,95 @@ const Form = ()=> {
                   </Link>
               </div>
             </div>
-            <h3> Crear Raza</h3>
-            <form onSubmit={handleSubmit} >
-                <div>
-                    <label >Nombre:</label>
-                    <input type="text" name="name" value={input.name} onChange={handleChange}/>
-                    {errors.name && (<span className='dato_incorrecto'>{errors.name}</span>)}
+            <h1 className="formTitle"> Crear Raza</h1>
+            <form className="form" onSubmit={handleSubmit} >
+                <div className="firstDivDetail">
+                  <div className="divDetail">
+                      <label className="labels" >Nombre:</label>
+                      <div className="divInput">
+                        <input type="text" name="name" value={input.name} onChange={handleChange}/>
+                        {errors.name && (<span className='dato_incorrecto'>{errors.name}</span>)}
+                      </div>
+                  </div>
+
+                  <div className="divDetail">
+                      <label className="labels" >Altura máxima:</label>
+                      <div className="divInput">
+                        <input type="text" name="maxHeight" value={input.maxHeight} onChange={handleChange}/>
+                        {errors.maxHeight && (<span className='dato_incorrecto'>{errors.maxHeight}</span>)}
+                      </div>
+                  </div>
+
+                  <div className="divDetail">
+                      <label className="labels" >Altura mínima:</label>
+                      <div className="divInput">
+                        <input type="text" name="minHeight" value={input.minHeight} onChange={handleChange}/>
+                        {errors.minHeight && (<span className='dato_incorrecto'>{errors.minHeight}</span>)}
+                      </div>
+                  </div>
                 </div>
 
-                <div>
-                    <label >Altura máxima:</label>
-                    <input type="text" name="maxHeight" value={input.maxHeight} onChange={handleChange}/>
-                    {errors.maxHeight && (<span className='dato_incorrecto'>{errors.maxHeight}</span>)}
+                <div className="secondDivDetail">
+                  <div className="divDetail">
+                      <label className="labels">Peso máximo:</label>
+                      <div className="divInput">
+                        <input type="text" name="maxWeight" value={input.maxWeight} onChange={handleChange}/>
+                        {errors.maxWeight && (<span className='dato_incorrecto'>{errors.maxWeight}</span>)}
+                      </div>
+                  </div>
+
+                  <div className="divDetail">
+                      <label className="labels" >Peso mínimo:</label>
+                      <div className="divInput"> 
+                        <input type="text" name="minWeight" value={input.minWeight} onChange={handleChange}/>
+                        {errors.minWeight && (<span className='dato_incorrecto'>{errors.minWeight}</span>)}
+                      </div>
+                  </div>
+
+                  <div className="divDetail">
+                      <label className="labels" >Esperanza de vida:</label>
+                      <div className="divInput">
+                        <input type="text" name="lifeSpan" value={input.lifeSpan} onChange={handleChange}/>
+                        {errors.lifeSpan && (<span className='dato_incorrecto'>{errors.lifeSpan}</span>)}
+                      </div>
+                  </div>
                 </div>
 
-                <div>
-                    <label >Altura mínima:</label>
-                    <input type="text" name="minHeight" value={input.minHeight} onChange={handleChange}/>
-                    {errors.minHeight && (<span className='dato_incorrecto'>{errors.minHeight}</span>)}
-                </div>
+                <div className="thirdDivDetail">
+                  <div className="divDetail">
+                      <label className="labels">URL de la imagen:</label>
+                      <div className="divInput">
+                        <input type="text" name="image" value={input.image} onChange={handleChange}/>
+                      </div>
+                  </div>
 
-                <div>
-                    <label>Peso máximo:</label>
-                    <input type="text" name="maxWeight" value={input.maxWeight} onChange={handleChange}/>
-                    {errors.maxWeight && (<span className='dato_incorrecto'>{errors.maxWeight}</span>)}
+                  <div className="divDetail">
+                      <label className="labels" >Temperamentos:</label>
+                      <div className="divInput">
+                        <select onChange={handleSelect} name="temperaments">
+                            <option disabled selected defaultValue>Temperaments</option>
+                            {
+                              temperamentsState?.map(temp => (
+                                  <option value={temp.name} key={temp.id} >{temp.name}</option>
+                              ))
+                            }
+                        </select>
+                        {errors.temperaments && (<span className="dato_incorrecto">{errors.temperaments}</span>)}
+                      </div>
+                  </div>
+                        
+                  <div className="divDetail">
+                      <label className="labels" >Borrar Temperamentos:</label>
+                      <div className="divInput" id="deleteTemp">
+                          {
+                            input.temperaments?.map(temp=> (
+                                <button className="btnDelete" type="button" value={temp} key={temp} onClick={() => handleDelete(temp)}>{temp}</button>
+                            ))
+                          }
+                      </div>
+                  </div>
                 </div>
-
-                <div>
-                    <label >Peso mínimo:</label>
-                    <input type="text" name="minWeight" value={input.minWeight} onChange={handleChange}/>
-                    {errors.minWeight && (<span className='dato_incorrecto'>{errors.minWeight}</span>)}
-                </div>
-
-                <div>
-                    <label >Esperanza de vida:</label>
-                    <input type="text" name="lifeSpan" value={input.lifeSpan} onChange={handleChange}/>
-                    {errors.lifeSpan && (<span className='dato_incorrecto'>{errors.lifeSpan}</span>)}
-                </div>
-
-                <div>
-                    <label>URL de la imagen:</label>
-                    <input type="text" name="image" value={input.image} onChange={handleChange}/>
-                </div>
-
-                <div>
-                    <label >Temperamentos:</label>
-                    <select onChange={handleSelect} name="temperaments">
-                        <option disabled selected defaultValue>Temperaments</option>
-                        {
-                          temperamentsState?.map(temp => (
-                              <option value={temp.name} key={temp.id} >{temp.name}</option>
-                          ))
-                        }
-                    </select>
-                    {errors.temperaments && (<span className="dato_incorrecto">{errors.temperaments}</span>)}
-                </div>
-            
-                <div>
-                    <label >Borrar Temperamentos:</label>
-                    <div>
-                        {
-                          input.temperaments?.map(temp=> (
-                              <button type="button" value={temp} key={temp} onClick={() => handleDelete(temp)}>{temp}</button>
-                          ))
-                        }
-                    </div>
-                </div>
-                <input className={errors.name || errors.minHeight || errors.maxHeight || errors.minWeight || errors.maxWeight || errors.lifeSpan || errors.temperaments ? "submit none" : "submit"} type="submit" value="Create"/>
+                <input className={errors.name || errors.minHeight || errors.maxHeight || errors.minWeight || errors.maxWeight || errors.temperaments ? "submit none" : "submit"} type="submit" value="Create"/>
             </form>
        </div>
     )

@@ -37,7 +37,7 @@ const Details = ()=> {
                         <div className="cardDiv">
                             <img src={dogDetail.image} alt=""/>
                         </div>
-                        <div>
+                        <div className="nameCont">
                             <h1>{dogDetail.name}</h1>
                         </div>
                         <div>

@@ -17,7 +17,7 @@ export default function Paginate({dogsPerPage,dogs,paginado,currentPage}) {
 
     return (
         <nav>
-            <ul>
+            <ul className="paginate">
                 <button className="btnPaginate" value="Prev" onClick={handleArrows} >⮜</button>
                 {
                     pageNumbers && pageNumbers.map(num => (

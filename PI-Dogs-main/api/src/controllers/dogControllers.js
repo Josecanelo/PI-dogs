@@ -94,10 +94,13 @@ async function getDogDetail(req,res) {
 async function createDog(req,res) {
     try {
         const {name, maxHeight, minHeight, maxWeight, minWeight, lifeSpan, temperaments, image} = req.body
-        if (name && maxHeight && minHeight && maxWeight && lifeSpan && temperaments.length) {
+        function cap(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+          }
+        if (name && maxHeight && minHeight && maxWeight && temperaments.length) {
             let newDog = await Dog.create(
                     {
-                        name,
+                        name: cap(name),
                         maxHeight,
                         minHeight,
                         maxWeight,
@@ -113,7 +116,7 @@ async function createDog(req,res) {
             newDog.addTemperament(temperamentDb)
             res.status(201).json("Creado con éxito")
         } else {
-            res.send("Daltan campos por completar")
+            res.send("Faltan campos por completar")
         }
     } catch (error) {
         res.status(400).json({error: error.message})

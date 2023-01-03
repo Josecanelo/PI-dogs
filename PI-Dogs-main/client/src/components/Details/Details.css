@@ -11,7 +11,7 @@
 
 .dogDetail{
     width: 15cm;
-    height: 15.5cm;
+    height: fit-content;
     margin-bottom: 20px;
     text-decoration: none;
     overflow: hidden;
@@ -22,6 +22,8 @@
     backdrop-filter: blur(5px);
     border-radius: 20px;
     border: 1px solid #ffffff;
+    color: #8DCECD;
+    text-shadow: 1px 1px 0.5px #5a8685;
 }
 
 .dogDetail h3{

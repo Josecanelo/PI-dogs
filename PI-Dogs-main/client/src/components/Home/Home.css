@@ -34,4 +34,16 @@
 #dispNone {
     display: none;
 }
+.text {
+    display: flex;
+    justify-content: center;
+    margin: -25px;
+    font-size: 25px;
+    color: #8DCECD;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.527);
+}
+
+
+
+
 
