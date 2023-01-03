@@ -1,0 +1,58 @@
+.dogCards{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 8px;
+}
+
+.dogCard{
+    width: 7cm;
+    height: 10cm;
+    margin-bottom: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0px 4px 22px 0px #0000001A;
+    transition: all 0.3s ease;
+    color: black;
+    background-color:rgba(255, 251, 251, 0.353);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+
+}
+
+.dogCard:hover {
+    box-shadow: 0px 4px 22px 0px #0000003d;
+}
+
+.dogCard img{
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 2px 2px 5px 2px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.774);
+    width: 3.5cm;
+    height: 3cm;
+}
+
+.nameCont {
+    font-size: 20px;
+    font-weight: 600;
+}
+.weightCont {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 5px
+}
+.tempCont {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 5px
+}
+.cardDiv {
+  padding-top: 25px;
+}
+
+
+

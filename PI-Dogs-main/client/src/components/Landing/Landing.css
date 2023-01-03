@@ -1,0 +1,56 @@
+.divLogo {
+    display: flex;
+    justify-content: left;
+    padding-left: 45px;
+    margin-top: 60px;
+    padding-top: 45px;
+}
+
+.body {
+    background-image: url('../Images/fondo-1.png');
+    background-position: 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin-top: -1.58cm;
+    margin-left: -0.2cm;
+    margin-bottom: -1.58cm;
+}
+.landingDiv2 h1{
+    padding-top: 75px;
+    font-size: 60px;
+    color: #ffe4a8;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0), 0 0 1em rgb(27, 27, 29), 0 0 0.2em rgb(27, 27, 29);
+    
+}
+
+.btn{
+    width: 220px;
+    height:40px;
+    margin-top: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border: 3px solid #8dcecd;
+    border-radius: 20px;
+    background-color: #ffe4a8;
+    color: #000;
+    box-shadow: 2px 2px 3px rgb(0, 0, 0), 0 0 1em rgb(27, 27, 29), 0 0 0.2em rgb(27, 27, 29);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn:hover{
+    width: 220px;
+    height:40px;
+    margin-top: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
+    background-color: #f4c767;
+    color: #000;
+    border-color:#6c9c9c;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}

@@ -1,0 +1,42 @@
+.dato_incorrecto {
+    margin-left: 15px;
+    color: #DF4545;
+    font-size: 12px;
+    font-weight: 700;
+}
+.submit {
+  height: 45px;
+  margin-top: 6px;
+  margin-left: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border: 3px solid #8dcecd;
+  border-radius: 20px;
+  background-color: #ffe4a8;
+  color: #000;
+}
+.submit:hover {
+  background-color: #f4c767;
+  cursor: pointer;
+}
+.submit:focus {
+  outline: none;
+}
+.submit.none {
+  height: 45px;
+  margin-top: 6px;
+  margin-left: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border: 3px solid #8dcecd;
+  border-radius: 20px;
+  background-color: #4f452f;
+  color: #000;
+  cursor: not-allowed;
+}
+.logoHome {
+  padding-top:10px ;
+  padding-left: 10px;
+  display: flex;
+  align-items: flex-start;
+}

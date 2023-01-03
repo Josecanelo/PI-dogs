@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    background-color: white;
+    border-bottom: 3px solid #8dcecd;
+}
+.footer {
+    border-top: 3px solid #8dcecd;
+}
+.header .logoHome {
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+}
+
+.contenedorDerecha {
+    padding-top:10px ;
+    display: flex;
+    align-items: flex-start;
+}
+.contenedorDerecha .divSelects {
+    padding-left: 8px;
+}
+.contenedorDerecha .divSelects select{
+    height: 30px;
+    border-radius: 5px;
+    border: 3px solid #8dcecd;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: right;
+    margin-top: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+#dispNone {
+    display: none;
+}
+
