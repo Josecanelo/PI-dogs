@@ -3,7 +3,6 @@ import {
     GET_DOG_DETAIL,
     GET_DOGS_BY_NAME,
     GET_DOG_TEMPERAMENTS,
-    CREATE_DOG,
     RESET_DETAIL,
     FILTER_BY_TEMPERAMENT,
     FILTER_BY_CREATED,
@@ -18,7 +17,6 @@ let initialState = {
     temperaments: [],
     detail:[],
     created:[],
-
     error: {}
 }
 
