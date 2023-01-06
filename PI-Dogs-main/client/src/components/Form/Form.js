@@ -16,7 +16,7 @@ const Form = ()=> {
         let errors = {};
         if(!input.name) {
           errors.name = "You have to give a name."
-        } else if(!/^[A-Za-z]+$/i.test(input.name)) {
+        } else if(!/^[A-Za-z ]+$/i.test(input.name)) {
           errors.name = "It can only contain letters."
         } else if(parseInt(input.name.length) >= 25) {
           errors.name= "Should have less than 25 characters."
