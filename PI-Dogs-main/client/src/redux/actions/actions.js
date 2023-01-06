@@ -22,7 +22,7 @@ export const getAllDogs = ()=> {
                         payload: res.data
                     })
                 }) */
-            const response = await axios.get("dogs")
+            const response = await axios.get("/dogs")
             dispatch({
                 type: GET_ALL_DOGS,
                 payload: response.data
@@ -57,7 +57,7 @@ export const getDogDetail = (id) => {
 export const getDogByName = (name) => {
     return async function (dispatch){
         try {
-            const response = await axios.get(`dogs?name=${name}`)
+            const response = await axios.get(`/dogs?name=${name}`)
             dispatch({
                 type: GET_DOGS_BY_NAME,
                 payload: response.data
@@ -74,7 +74,7 @@ export const getDogByName = (name) => {
 export const getDogTemperaments = () => {
     return async function (dispatch){
         try {
-            const response = await axios.get("temperaments")
+            const response = await axios.get("/temperaments")
             dispatch({
                 type: GET_DOG_TEMPERAMENTS,
                 payload: response.data
@@ -91,7 +91,7 @@ export const getDogTemperaments = () => {
 export const createDog = (payload) => {
     return async function (dispatch){
         try {
-            const response = await axios.post("dogs", payload)
+            const response = await axios.post("/dogs", payload)
             alert(response.data)
         } catch (error) {
             dispatch({
