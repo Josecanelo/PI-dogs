@@ -5,7 +5,7 @@ import Landing from "./components/Landing/Landing"
 import Details from "./components/Details/Details"
 import { Route } from 'react-router-dom';
 import axios from 'axios';
-axios.defaults.baseURL = "pi-dogs-production-eddc.up.railway.app/"
+axios.defaults.baseURL = "https://pi-dogs-production-eddc.up.railway.app/"
  
 
 function App() {
