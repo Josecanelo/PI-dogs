@@ -101,7 +101,7 @@ const Home = ()=> {
                                 }
                             </select>
                         </div>
-                        <button className="btnHome"><Link id="linkCreate" to="/dog">Create breed</Link></button>
+                        <Link id="linkCreate" to="/dog"><button className="btnHome">Create breed</button></Link>
                     </div>
                 </header>            
                 <div className="text"><h1>Learn more about your dog!</h1></div>

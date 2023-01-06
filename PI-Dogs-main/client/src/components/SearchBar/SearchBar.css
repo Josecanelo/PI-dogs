@@ -39,10 +39,6 @@
     font-weight: 200;
     cursor: pointer;
 }
-#linkCreate {
-    text-decoration: none;
-    color: #000;
-}
 .loader {
     margin-top: 155px;
 }

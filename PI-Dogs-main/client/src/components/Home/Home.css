@@ -34,6 +34,10 @@
 #dispNone {
     display: none;
 }
+#linkCreate {
+    text-decoration: none;
+    color: #000;
+}
 .text {
     display: flex;
     justify-content: center;
