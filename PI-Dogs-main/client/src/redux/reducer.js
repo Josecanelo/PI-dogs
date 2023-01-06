@@ -66,7 +66,7 @@ export default function rootReducer(state=initialState, action) {
                 dogs: dogsTemperament
             };
         case ORDERED_DOGS:
-            let unorderedDogs = state.allDogs
+            let unorderedDogs = state.dogs
             if (action.payload === "A-Z") {
                 let orderedAZ = unorderedDogs.sort((a,b) => {
                     if(a.name > b.name) return 1
@@ -113,8 +113,7 @@ export default function rootReducer(state=initialState, action) {
                     dogs:lightierOrdered
                 }
             }
-
-
+            console.log(state.dogs);
             return {
                 ...state,
                 dogs: unorderedDogs
