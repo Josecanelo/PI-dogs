@@ -126,7 +126,7 @@ const Form = ()=> {
                   </Link>
               </div>
             </div>
-            <h1 className="formTitle"> Crear Raza</h1>
+            <h1 className="formTitle">Create breed</h1>
             <form className="form" onSubmit={handleSubmit} >
                 <div className="firstDivDetail">
                   <div className="divDetail">

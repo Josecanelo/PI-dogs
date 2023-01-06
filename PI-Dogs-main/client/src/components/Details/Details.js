@@ -42,16 +42,16 @@ const Details = ()=> {
                         </div>
                         <div>
                             <h3>
-                                Min. weight: {dogDetail.minWeight} 
-                                <br />
                                 Max. weight: {dogDetail.maxWeight}
+                                <br />
+                                Min. weight: {dogDetail.minWeight} 
                             </h3>
                         </div>
                         <div>
                             <h3>
-                                Min. height: {dogDetail.minHeight} 
-                                <br/>
                                 Max. height: {dogDetail.maxHeight}
+                                <br/>
+                                Min. height: {dogDetail.minHeight} 
                             </h3>
                         </div>
                         <h3>

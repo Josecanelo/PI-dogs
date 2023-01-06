@@ -18,9 +18,9 @@ const Card = ({dog})=> {
                     </div>
                     <div className="weightCont">
                         <h5>
-                           Min. weight: {dog.minWeight} 
-                           <br/>
-                           Max. weight: {dog.maxWeight}
+                            Max. weight: {dog.maxWeight} 
+                            <br/>
+                            Min. weight: {dog.minWeight}
                         </h5>
                     </div>
                        <h5 className="tempCont">
