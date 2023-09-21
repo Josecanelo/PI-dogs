@@ -22,7 +22,7 @@ async function allDogs() {
             maxWeight: weightArray[1],
             lifeSpan: e.life_span,
             temperament: e.temperament || "Curious",
-            image: e.image.url || "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3Dnot%2BFound&psig=AOvVaw2eTRaKvu_1dts6lJJzUJCm&ust=1695401833607000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOipj5KWvIEDFQAAAAAdAAAAABAE"
+            //image: e.image.url
         }
     })
     let dbDogs = await Dog.findAll({
