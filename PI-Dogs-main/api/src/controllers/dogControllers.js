@@ -22,8 +22,8 @@ async function allDogs() {
             maxWeight: weightArray[1],
             lifeSpan: e.life_span,
             temperament: e.temperament || "Curious",
-            image: e.image.url
-        }
+/*             image: e.image.url
+ */        }
     })
     let dbDogs = await Dog.findAll({
         include:{
